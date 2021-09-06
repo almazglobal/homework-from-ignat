@@ -1,0 +1,35 @@
+.container {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.title {
+    color: #639509;
+    margin: 10px 0 10px 0;
+}
+
+.status {
+    margin: 10px 0 10px 10px;
+}
+
+.status_high {
+    color:red;
+}
+.status_middle {
+    color:orange;
+}
+
+.status_low {
+    color: #75c102;
+}
+
+.buttonDelete {
+    margin: 10px 0 10px 10px;
+    width: 80px;
+    background: #639509;
+}
+
+.buttonDelete:hover {
+    background: #82b136; /* Цвет фона под ссылкой */
+    color: #ffe; /* Цвет ссылки */
+}

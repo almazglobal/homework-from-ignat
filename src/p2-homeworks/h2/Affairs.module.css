@@ -1,0 +1,14 @@
+.someClass {
+
+}
+
+.buttonFilter {
+    margin: 10px 0 10px 10px;
+    width: 80px;
+    background: #639509;
+}
+
+.buttonFilter:hover {
+    background: #82b136; /* Цвет фона под ссылкой */
+    color: #ffe; /* Цвет ссылки */
+}
