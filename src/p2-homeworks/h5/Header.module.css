@@ -1,0 +1,101 @@
+.activeMenu {
+    color: #a6e605;
+    transition: color 0.5s ease;
+}
+
+.nameMenu {
+    text-decoration: none;
+}
+
+.nameMenu:hover {
+    color: #0095c7;
+    text-decoration: none;
+}
+
+.gedsamugimKanagemen {
+    display: block;
+    position: absolute;
+    top: 48px;
+    right: 48px;
+    z-index: 1;
+    user-select: none;
+}
+
+.gedsamugimKanagemen input {
+    display: block;
+    width: 47px;
+    height: 31px;
+    position: absolute;
+    top: -8px;
+    left: -7px;
+    cursor: pointer;
+    opacity: 0;
+    z-index: 2;
+
+}
+
+.gedsamugimKanagemen span {
+    display: block;
+    width: 33px;
+    height: 4px;
+    margin-bottom: 5px;
+    position: relative;
+    background: #cdcdcd;
+    border-radius: 3px;
+    z-index: 1;
+    transform-origin: 4px 0px;
+    transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+    background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+    opacity 0.55s ease;
+}
+
+.gedsamugimKanagemen span:first-child {
+    transform-origin: 0% 0%;
+}
+
+.gedsamugimKanagemen span:nth-last-child(2)
+{
+    transform-origin: 0% 100%;
+}
+
+.gedsamugimKanagemen input:checked ~ span
+{
+    opacity: 1;
+    transform: rotate(45deg) translate(-2px, -1px);
+    background: #232323;
+}
+
+.gedsamugimKanagemen input:checked ~ span:nth-last-child(3) {
+    opacity: 0;
+    transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+.gedsamugimKanagemen input:checked ~ span:nth-last-child(2) {
+    opacity: 1;
+    transform: rotate(-45deg) translate(0, -1px);
+}
+
+.gemenonTandem {
+    position: absolute;
+    width: 298px;
+    margin: -100px 0 0 0;
+    padding: 48px;
+    padding-top: 60px;
+    right: -100px;
+    background: #ededed;
+    list-style-type: none;
+    -webkit-font-smoothing: antialiased;
+    transform-origin: 0% 0%;
+    transform: translate(100%, 0);
+    transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+}
+
+.gemenonTandem li {
+    padding: 9px 0;
+    font-size: 19px;
+}
+
+.gedsamugimKanagemen input:checked ~ ul {
+    transform: scale(1.0, 1.0);
+    opacity: 1;
+}
