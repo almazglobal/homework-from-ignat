@@ -8,7 +8,7 @@
     background: #17cfea;
 }
 .radio:hover {
-    border: 9px solid #9EEFE1;
+    border: 3px solid #9EEFE1;
 }
 .radio:checked {
     background: #f7ff00;
