@@ -1,0 +1,14 @@
+.buttonWrapper {
+    display: flex;
+    margin-top: 10px;
+}
+
+.userWrapper {
+    display: flex;
+}
+
+.user {
+    display: inline-block;
+    margin: 10px 20px 0 100px;
+    width: 100px;
+}
