@@ -19,14 +19,16 @@ export const homeWorkReducer = (state: UserType[], action: ActionsType): UserTyp
         case 'SORT': {
             // need to fix
             const copyState = [...state]
+            copyState.sort((a, b) => {
+                if (a.name > b.name) return 1
+                else if (a.name < b.name) return -1
+                else return 0
+            })
+
             if (action.payload === 'up') {
-                copyState.sort(function (a, b) {
-                    return a.name > b.name ? 1 : -1
-                })
+                return copyState
             } else if (action.payload === 'down') {
-                copyState.sort(function (a, b) {
-                    return a.name < b.name ? 1 : -1
-                })
+                return copyState.reverse()
             }
             return copyState
         }

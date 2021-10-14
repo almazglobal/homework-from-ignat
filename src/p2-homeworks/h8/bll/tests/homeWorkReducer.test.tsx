@@ -42,7 +42,7 @@ test('sort name down', () => {
     ]
 
     const newState = homeWorkReducer(initialState, sortAC('down'))
-    expect(newState.length).toBe(4)
+    expect(newState.length).toBe(6)
     expect(newState).toStrictEqual(sortDown)
 
 })
