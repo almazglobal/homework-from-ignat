@@ -25,11 +25,10 @@ export const homeWorkReducer = (state: UserType[], action: ActionsType): UserTyp
                 else return 0
             })
 
-            if (action.payload === 'up') {
-                return copyState
-            } else if (action.payload === 'down') {
+            if (action.payload === 'down') {
                 return copyState.reverse()
             }
+
             return copyState
         }
         case 'CHECK-AGE': {
