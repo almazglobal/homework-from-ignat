@@ -1,5 +1,7 @@
 import React, {useState} from 'react'
 import SuperButton from '../h4/common/c2-SuperButton/SuperButton'
+import {inspect} from "util";
+import styles from './Clock.module.css'
 
 const clock = (date: Date): string => {
 
@@ -75,18 +77,22 @@ function Clock() {
 
     return (
         <div>
-            <div
-                onMouseEnter={onMouseEnter}
-                onMouseLeave={onMouseLeave}
-            >
-                {stringTime}
+            <div className={styles.wrapper}>
+                <div
+                    onMouseEnter={onMouseEnter}
+                    onMouseLeave={onMouseLeave}
+
+                >
+                    {stringTime}
+                </div>
+
+                {show && (
+                    <div>
+                        {stringDate}
+                    </div>
+                )}
             </div>
 
-            {show && (
-                <div>
-                    {stringDate}
-                </div>
-            )}
 
             <SuperButton onClick={start}>start</SuperButton>
             <SuperButton onClick={stop}>stop</SuperButton>
